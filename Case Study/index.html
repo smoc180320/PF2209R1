@@ -6,8 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1f8ec63897.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="cart-icon">
+        <p><i class="fa-sharp fa-solid fa-cart-shopping"></i><span>0</span><sup>đ</sup></p>
+    </div>
     <section class="product">
         <div class="container">
             <div class="product-items">
@@ -15,7 +19,7 @@
                     <img src="img/Galaxy-S22-Ultra-Burgundy-600x600.jpeg" alt="">
                     <div class="product-item-text">
                         <p><span>25490000</span><sup>đ</sup></p>
-                        <h1 style="font-weight: normal; font-size: 18px;">Samsung Galaxy S22 Ultra</h1>
+                        <h1 style="font-weight: normal; font-size: 18px;">Galaxy S22 Ultra</h1>
                     </div>
                     <button>Thêm vào giỏ hàng</button>
                 </div>
@@ -55,6 +59,7 @@
         </div>
     </section>
     <section class="cart">
+        <i class="fa-solid fa-xmark"></i>
         <h2>Cart</h2>
         <form action="">
             <table>
@@ -100,8 +105,9 @@
                 </tbody>
             </table>
             <div style="text-align: right;" class="price-total">
-                <p style="font-weight: bold;">Tổng tiền: <span> 27.490.000</span><sup>đ</sup></p>
+                <p style="font-weight: bold;">Tổng tiền: <span></span><sup>đ</sup></p>
             </div>
+            <button>Đặt hàng</button>
         </form>
     </section>
     <script src="script.js"></script>

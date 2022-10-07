@@ -40,7 +40,7 @@ html, body {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
 }
 .product-item button:hover {
     background-color: tomato;
@@ -51,7 +51,16 @@ html, body {
     width:50%;
     margin: auto;
     text-align: center;
-    padding-top: 30px;
+    position: fixed;
+    height: 100vh;
+    width: 600px;
+    right: 0;
+    top: 0;
+    background-color: rgb(231, 153, 153);
+    padding: 12px 20px;
+    overflow-y: scroll;
+    right: -100%;
+    transition: all 0.3s ease;
 }
 .cart h2 {
     margin-bottom: 20px;
@@ -71,4 +80,25 @@ html, body {
 }
 .cart table tbody tr td:last-child {
     text-align: right;
+}
+/* ................... */
+.cart button {
+    margin-top: 12px;
+    height: 30px;
+    padding: 0 20px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    background-color: tomato;
+}
+/* --------------------- */
+.cart i {
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.cart-icon p i{
+    font-size: 25px;
 }

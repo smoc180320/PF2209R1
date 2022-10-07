@@ -24,12 +24,13 @@ function addcart(productPrice,productImg,productName){
             return
         }
     }
-    let trContent = '<tr><td style="display:flex;align-items: center;"><img style="width:70px" src="'+productImg+'" alt=""><span class="title">'+productName+'</span>'+productName+'</td><td><span>'+productPrice+'</span><sup>đ</sup></td><td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td><td style="cursor: pointer;">Xóa</td></tr>'
+    let trContent = '<tr><td style="display:flex;align-items: center;"><img style="width:70px" src="'+productImg+'" alt=""><span class="title">'+productName+'</span>'+productName+'</td><td><span class="price">'+productPrice+'</span><sup>đ</sup></td><td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td><td style="cursor: pointer;"><span class="cart-delete">Xóa</span></td></tr>'
     addTr.innerHTML = trContent
     let cartTable = document.querySelector("tbody")
     // console.log(cartTable)
     cartTable.append(addTr)
     cartTotal()
+    deleteCart()
 }
 //--------------Total-Price---------------
 function cartTotal(){
@@ -38,17 +39,53 @@ function cartTotal(){
     // console.log(cartItem)
     for (let i = 0; i < cartItem.length; i++) {
         let inputValue = cartItem[i].querySelector("input").value
-        let productPrice = cartItem[i].querySelector("span").innerHTML
-        console.log(inputValue)
-        console.log(productPrice)
+        let productPrice = cartItem[i].querySelector(".price").innerHTML
+        // console.log(inputValue)
+        // console.log(productPrice)
         totalA = inputValue*productPrice
         // totalB = totalA.toLocaleString('de-DE')
-        console.log(totalA)
+        // console.log(totalA)
         totalC = totalC + totalA
-        totalB = totalC.toLocaleString('de-DE')
-        console.log(totalB)
-
+        // totalB = totalC.toLocaleString('de-DE')
+        // console.log(totalC)
     }
+    
     let cartTotalA = document.querySelector(".price-total span")
-    cartTotalA.innerHTML = totalB
+    let cartPrice = document.querySelector(".cart-icon span")
+    cartTotalA.innerHTML = totalC.toLocaleString('de-DE')
+    cartPrice.innerHTML = totalC.toLocaleString('de-DE')
+    inputchange()
 }
+//--------------Delete---------------
+function deleteCart(){
+    let cartItem = document.querySelectorAll("tbody tr")
+    for (let i = 0; i < cartItem.length; i++){
+        let productT = document.querySelectorAll(".cart-delete")
+        productT[i].addEventListener("click",function(event){
+            let cartDelete = event.target
+            let cartItemR = cartDelete.parentElement.parentElement
+            console.log(cartItemR)
+            cartItemR.remove()
+            cartTotal()
+        })
+       
+    }
+}
+function inputchange(){
+    let cartItem = document.querySelectorAll("tbody tr")
+    for (let i = 0; i < cartItem.length; i++){
+        let inputValue = cartItem[i].querySelector("input")
+        inputValue.addEventListener("change",function(){
+            cartTotal()
+        })
+       
+    }
+}
+ const cartBtn = document.querySelector(".fa-xmark")
+ const cartShow = document.querySelector(".fa-cart-shopping")
+ cartShow.addEventListener("click",function(){
+     document.querySelector(".cart").style.right = "0"
+ })
+ cartBtn.addEventListener("click",function(){
+    document.querySelector(".cart").style.right = "-100%"
+})
