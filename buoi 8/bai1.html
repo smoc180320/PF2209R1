@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Họ và tên
+        <input type="text" id="hoTen">
+    </div>
+    <button onclick="sayHello()" type="button">Chào</button>
+    <div>Xin chào bạn <span id="tenBan"></span></div>
+    <div id="test"></div>
+    <script>
+        let a = "24.999.999";
+        let b = Number.parseInt(a,0)
+        console.log(b)
+        function sayHello() {
+            let txtHoTen = document.getElementById("hoTen")
+            txtHoTen.style.backgroundColor = "red"
+            let chuoi = `<b>${txtHoTen.value}</b>`
+            console.log(txtHoTen)
+            document.getElementById("tenBan").innerHTML = chuoi; //render luôn
+            document.getElementById("test").innerText = chuoi
+}
+    </script>
+</body>
+</html>
