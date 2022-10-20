@@ -1,0 +1,257 @@
+html, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: #EFCE44;
+    text-align: center;
+    height: 44px;
+}
+.container{
+    max-width: 1880px;
+    margin: auto;
+}
+/* -------------------nav----------------- */
+nav {
+    background-color: black;
+    height: 40px;
+
+}
+ul {
+    align-items: center;
+    list-style: none;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0 60px;
+}
+nav ul li, a {
+    color: white;
+    font-size: 15px;
+    padding: 4px 0;
+    text-decoration: none;
+}
+/* --------nơi mua sắm-------- */
+nav ul li:nth-child(2) a{
+    color: #EFCE44;
+}
+nav ul li:nth-child(2) i{
+    color: #EFCE44;
+    font-size: 15px;
+    margin-left: 6px;
+}
+/* --------tìm kiếm-------- */
+nav ul li:nth-child(3) {
+    position: relative;
+}
+nav ul li:nth-child(3) input{
+    height: 22px;
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+    font-size: 12px;
+    padding-left: 6px;
+    outline: none;
+}
+nav ul li:nth-child(3) i{
+    position: absolute;
+    font-size: 15px;
+    right: 12px;
+    color: #333;
+    line-height: 25px;
+    cursor: pointer;
+}
+/* --------Giỏ hàng-------- */
+nav ul li:nth-child(4) button{
+    height: 30px;
+    padding: 0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(91, 89, 89);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li:nth-child(4) button i {
+    margin-right: 6px;
+}
+nav ul li:nth-child(4) button:hover{
+    background-color: rgb(100, 97, 97);
+}
+/* --------Lịch sử mua hàng-------- */
+nav ul li:nth-child(5):hover a{
+    color: #EFCE44;
+}
+nav ul li:nth-child(5) {
+    text-align: center;
+}
+/* --------mua thẻ nạp ngay-------- */
+nav ul li:nth-child(6) a{
+    color: #EFCE44;
+}
+.btn-content {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #EFCE44;
+    display: block;
+    float: left;
+    margin-right: 4px;
+}
+.btn-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #f5c60a;
+    display: block;
+    pointer-events: none;
+    animation: btnani 1s linear infinite;
+}
+@keyframes btnani {
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+/* -------------24h công nghệ, hỏi đáp, game------------- */
+nav ul li:nth-child(7):hover a, nav ul li:nth-child(8):hover a, nav ul li:nth-child(9):hover a {
+    color: #EFCE44;
+}
+/* -------Menu Bar----------- */
+.menu-bar {
+    background-color: #FED100;
+    
+}
+.menu-bar ul {
+    display: flex;
+    margin: 0 30px;
+    padding: 0;
+    justify-content: space-between;
+}
+.menu-bar ul li {
+    padding: 18px 5px;
+    transition: all 0.3 ease;
+    /* width: 100%; */
+}
+.menu-bar ul li a {
+    color: #333;
+    font-size: 15px;
+}
+.menu-bar ul li a i {
+    margin-right: 6px;
+    font-size: 18px;
+}
+.menu-bar ul li:hover{
+    background-color: white;
+}
+.menu-bar ul li:nth-child(9){
+    position: relative;
+}
+.menu-bar ul li:nth-child(9)::before{
+    position: absolute;
+    content: "Giảm 5%";
+    font-size: 10px;
+    padding-left: 3px;
+    color: wheat;
+    display: block;
+    height: 15px;
+    width: 45px;
+    background-color: red;
+    border-radius: 5px;
+    right: 0;
+    top:3px;
+}
+.menu-bar ul li:nth-child(9)::after{
+    position: absolute;
+    content: "";
+    background-color: red;
+    height: 7px;
+    width: 7px;
+    display: block;
+    top: 13px;
+    right: 9px;
+    transform: rotate(45deg);
+}
+/* ------Form Popup-------- */
+.address-form {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: none;
+    z-index: 999;
+}
+.address-form-content {
+    width: 400px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.address-form-content form {
+    padding: 0 40px;
+}
+.address-form-content h2{
+    font-size: 14px;
+    padding: 15px 0;
+    border-bottom: 1px solid gray;
+    position: relative;
+    margin: 0;
+}
+.address-form-content h2 span {
+    display: block;
+    position: absolute;
+    height: 30px;
+    padding: 0 6px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    right: 12px;
+    top: 50%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    line-height: 30px;
+}
+.address-form-content form p {
+    font-size: 16px;
+}
+.address-form-content form input, select {
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+    border: 1px solid grey;
+    padding: 0;
+    border-radius: 5px;
+
+}
+.address-form-content form button {
+    margin-top: 20px;
+    height: 40px;
+    width: 80%;
+    background-color: #F97E0E;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    outline: none;
+}
