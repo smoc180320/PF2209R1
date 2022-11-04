@@ -1,6 +1,6 @@
 //------------Select Product-------------
 const btn = document.querySelectorAll("button");
-// console.log(btn);
+ 
 btn.forEach(function(button,index){
     button.addEventListener("click",function(event){{
         let btnItem = event.target
@@ -36,7 +36,6 @@ function addcart(productPrice,productImg,productName){
 function cartTotal(){
     let cartItem = document.querySelectorAll("tbody tr")
     let totalC = 0
-    // console.log(cartItem)
     for (let i = 0; i < cartItem.length; i++) {
         let inputValue = cartItem[i].querySelector("input").value
         let productPrice = cartItem[i].querySelector(".price").innerHTML
@@ -61,6 +60,7 @@ function deleteCart(){
     let cartItem = document.querySelectorAll("tbody tr")
     for (let i = 0; i < cartItem.length; i++){
         let productT = document.querySelectorAll(".cart-delete")
+        console.log(productT)
         productT[i].addEventListener("click",function(event){
             let cartDelete = event.target
             let cartItemR = cartDelete.parentElement.parentElement

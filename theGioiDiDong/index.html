@@ -47,7 +47,7 @@
                     </div>
                 </div>
                 <li><input type="text" placeholder="Bạn tìm kiếm..."><i class="fa-solid fa-magnifying-glass"></i></li>
-                <li><a href=""><button><i style="margin-right:5px" class="fa-solid fa-cart-shopping"></i>Giỏ hàng</button></a></li>
+                <li><button style="font-size: 16px;"><i style="margin-right:5px; font-size: 20px; color: red;" class="fa-solid fa-cart-shopping"></i><span style="font-size: 20px;" id="total-item"></span> Giỏ hàng</button></li>
                 <li><a href="">Lịch sử <br> đơn hàng</a></li>
                 <li><a href=""><span class="btn-content"><span class="btn-top"></span></span>Mua thẻ nạp ngay!</a></li>
                 <li><a href="">24h Công nghệ</a></li>
@@ -56,6 +56,57 @@
             </ul>
         </div>
     </nav>
+    <section class="cart">
+        <i class="fa-solid fa-xmark"></i>
+        <form action="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px" src="img/Galaxy-S22-Ultra-Burgundy-600x600.jpeg" alt="">Samsung Galaxy S22 Ultra</td>
+                        <td><span>25.490.000</span><sup>đ</sup></td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px" src="img/iphone-13-pink-2-600x600.jpg" alt="">iPhone 13 Pink</td>
+                        <td><span>19.690.000</span><sup>đ</sup></td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px" src="img/iphone-13-pro-max-sierra-blue-600x600.jpeg" alt="">iPhone 13 Pro Max</td>
+                        <td><span>27.490.000</span><sup>đ</sup></td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px" src="img/iphone-14-pro-tim-thumb-600x600.jpeg" alt="">iphone 14 Pro</td>
+                        <td><span>30.990.000</span><sup>đ</sup></td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px" src="img/oppo-reno8-pro-thumb-xanh-1-600x600.jpeg" alt="">Oppo Reno 8 Pro</td>
+                        <td><span>19.690.000</span><sup>đ</sup></td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div style="text-align: right;" class="price-total">
+                <p style="font-weight: bold;">Tổng tiền: <span></span><sup>đ</sup></p>
+            </div>
+            <button>Đặt hàng</button>
+        </form>
+    </section>
     <section class="menu-bar">
         <div class="container">
             <div class="menu-bar-content">
@@ -156,11 +207,12 @@
                                 <a href=""><img src="img/iphone-14-pro-max-tim-thumb-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Iphone 14 Pro Max 128GB</li>
+                                    <li class="name-product"> Iphone14 Pro Max 128GB</li>
                                     <li>Online giá rẻ</li>
                                     <li>34.990.000 <sup>đ</sup></li>
-                                    <li>31.990.000 <sup>đ</sup></li>
+                                    <li><span>31.990.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
+                        
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -169,17 +221,19 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(21)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/iPhone-14-plus-thumb-xanh-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Iphone 14 Plus 128GB</li>
+                                    <li class="name-product">Iphone 14 Plus 128GB</li>
                                     <li>Online giá rẻ</li>
-                                    <li>27.990.000 <sup>đ</sup></li>
-                                    <li>27.490.000 <sup>đ</sup></li>
+                                    <li> 27.990.000 <sup>đ</sup></li>
+                                    <li><span>27.490.000 </span> <sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
+                                    
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -188,17 +242,19 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(38)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/iPhone-14-thumb-trang-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Iphone 14 128GB</li>
+                                    <li class="name-product">Iphone 14 128GB</li>
                                     <li>Online giá rẻ</li>
                                     <li>24.990.000 <sup>đ</sup></li>
-                                    <li>24.490.000 <sup>đ</sup></li>
+                                    <li><span>24.490.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
+                                    
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -207,17 +263,19 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(156)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/iphone-13-pro-graphite-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Iphone 13 Pro Max 128GB</li>
+                                    <li class="name-product">Iphone 13 Pro Max 128GB</li>
                                     <li>Online giá rẻ</li>
                                     <li>33.990.000 <sup>đ</sup></li>
-                                    <li>27.490.000 <sup>đ</sup></li>
+                                    <li><span>27.490.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
+
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -226,16 +284,17 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(199)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/iphone-13-pro-max-gold-1-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Iphone 14 Pro Max 128GB</li>
+                                    <li class="name-product">Iphone 14 Pro Max 128GB</li>
                                     <li>Online giá rẻ</li>
                                     <li>33.990.000 <sup>đ</sup></li>
-                                    <li>27.490.000 <sup>đ</sup></li>
+                                    <li><span>27.490.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -245,6 +304,7 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(151)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -253,10 +313,10 @@
                                 <a href=""><img src="img/img1.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Macbook Air M1 256GB</li>
+                                    <li class="name-product">Macbook Air M1 256GB</li>
                                     <li>Online giá rẻ</li>
                                     <li>24.990.000 <sup>đ</sup></li>
-                                    <li>21.990.000 <sup>đ</sup></li>
+                                    <li><span>21.990.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -266,16 +326,17 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(26)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/bluetooth-airpods-pro-magsafe-charge-apple-mlwk3-thumb-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Tai nghe Airpods Pro</li>
+                                    <li class="name-product">Tai nghe Airpods Pro</li>
                                     <li>Online giá rẻ</li>
                                     <li>4.990.000 <sup>đ</sup></li>
-                                    <li>4.490.000 <sup>đ</sup></li>
+                                    <li><span>4.490.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -285,16 +346,17 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(38)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/img3.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Dell Gaming G5</li>
+                                    <li class="name-product">Dell Gaming G5</li>
                                     <li>Online giá rẻ</li>
                                     <li>22.990.000 <sup>đ</sup></li>
-                                    <li>20.090.000 <sup>đ</sup></li>
+                                    <li><span>20.090.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -304,16 +366,17 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(16)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/img4.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>HP Victus 16 inch</li>
+                                    <li class="name-product">HP Victus 16 inch</li>
                                     <li>Online giá rẻ</li>
                                     <li>20.990.000 <sup>đ</sup></li>
-                                    <li>19.490.000 <sup>đ</sup></li>
+                                    <li><span>19.490.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -323,16 +386,17 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(199)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/se-40mm-vien-nhom-day-cao-su-xanh-den-thumb-1-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Apple Watch SE</li>
+                                    <li class="name-product">Apple Watch SE</li>
                                     <li>Online giá rẻ</li>
                                     <li>8.990.000 <sup>đ</sup></li>
-                                    <li>6.990.000 <sup>đ</sup></li>
+                                    <li><span>6.990.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -342,6 +406,7 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(14)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -350,10 +415,10 @@
                                 <a href=""><img src="img/oppo-find-x5-pro-den-thumb-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Oppo Find X5</li>
+                                    <li class="name-product">Oppo Find X5</li>
                                     <li>Online giá rẻ</li>
                                     <li>32.990.000 <sup>đ</sup></li>
-                                    <li>28.990.000 <sup>đ</sup></li>
+                                    <li><span>28.990.000</span> <sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -363,16 +428,17 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(209)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/Galaxy-S22-Plus-White-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Galaxy Plus White</li>
+                                    <li class="name-product">Galaxy S22 Plus White</li>
                                     <li>Online giá rẻ</li>
                                     <li>25.990.000 <sup>đ</sup></li>
-                                    <li>19.990.000 <sup>đ</sup></li>
+                                    <li><span>19.990.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -382,16 +448,17 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(38)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/iphone-12-den-new-2-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Iphone 12 64GB</li>
+                                    <li class="name-product">Iphone 12 64GB</li>
                                     <li>Online giá rẻ</li>
                                     <li>19.990.000 <sup>đ</sup></li>
-                                    <li>16.990.000 <sup>đ</sup></li>
+                                    <li><span>16.990.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -401,17 +468,18 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(156)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/iphone-13-pink-2-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Iphone 13 Pink 128GB</li>
+                                    <li class="name-product">Iphone 13 Pink 128GB</li>
                                     <li>Online giá rẻ</li>
                                     <li>24.990.000 <sup>đ</sup></li>
-                                    <li>19.690.000 <sup>đ</sup></li>
-                                    <li>Quà tặng 500.000<sup>đ</sup></li>
+                                    <li><span>19.690.000 </span><sup>đ</sup></li>
+                                    <li >Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -420,16 +488,17 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(199)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                             <div class="silder-product-one-content-item">
                                 <a href=""><img src="img/iphone-14-pro-max-tim-thumb-600x600.jpeg" alt=""></a>
                                 <div class="silder-product-one-content-text">
                                     <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                                    <li>Iphone 14 Pro Max 128GB</li>
+                                    <li class="name-product">Iphone 14 Pro Max 128GB</li>
                                     <li>Online giá rẻ</li>
                                     <li>33.990.000 <sup>đ</sup></li>
-                                    <li>29.490.000 <sup>đ</sup></li>
+                                    <li><span>29.490.000</span><sup>đ</sup></li>
                                     <li>Quà tặng 500.000<sup>đ</sup></li>
                                     <li>
                                         <i class="fa-sharp fa-solid fa-star"></i>
@@ -439,6 +508,7 @@
                                         <i class="fa-sharp fa-solid fa-star"></i>
                                         <span>(151)</span>
                                     </li>
+                                    <button class="addCartBuying">Thêm vào giỏ hàng</button>
                                 </div>
                             </div>
                         </div>
@@ -485,7 +555,7 @@
                     <div class="trend-sale-box-content-item">
                         <a href=""><img src="img/xu huong/Frame-47574-280x235.png" alt=""></a>
                         <div class="trend-sale-box-content-item-text">
-                            <p>Lapptop Gaming</p>
+                            <p>Tai nghe True Wireless</p>
                             <a href="">Đặt ngay</a>
                         </div>
                         
@@ -613,10 +683,10 @@
                         <a href=""><img src="img/img2/Samsung-Galaxy-S21-FE-trang-1-2-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Samsung Galaxy S21 FE</li>
+                            <li class="name-product">Samsung Galaxy S21 FE</li>
                             <li>Online giá rẻ</li>
                             <li>13.990.000 <sup>đ</sup></li>
-                            <li>13.490.000 <sup>đ</sup></li>
+                            <li><span>13.490.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -626,16 +696,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/iphone-xi-xanhla-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>iPhone 11 xanh lá</li>
+                            <li class="name-product">iPhone 11 xanh lá</li>
                             <li>Online giá rẻ</li>
                             <li>10.990.000 <sup>đ</sup></li>
-                            <li>9.490.000 <sup>đ</sup></li>
+                            <li><span>9.490.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -645,16 +716,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/oppo-reno8-z-5g-vang-thumb-2-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>OPPO Reno8 5G</li>
+                            <li class="name-product">OPPO Reno8 5G</li>
                             <li>Online giá rẻ</li>
                             <li>18.990.000 <sup>đ</sup></li>
-                            <li>18.490.000 <sup>đ</sup></li>
+                            <li><span>18.490.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -664,16 +736,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/realme-c21-y-blue-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Realme C21-Y</li>
+                            <li class="name-product">Realme C21-Y</li>
                             <li>Online giá rẻ</li>
                             <li>3.990.000 <sup>đ</sup></li>
-                            <li>3.490.000 <sup>đ</sup></li>
+                            <li><span>3.490.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -683,16 +756,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/realme-c25y-blue-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Realme C25-Y</li>
+                            <li class="name-product">Realme C25-Y</li>
                             <li>Online giá rẻ</li>
                             <li>4.690.000 <sup>đ</sup></li>
-                            <li>2.690.000 <sup>đ</sup></li>
+                            <li><span>2.690.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -702,16 +776,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/samsung-galaxy-a23-xanh-thumb-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Samsung Galaxy A23</li>
+                            <li class="name-product">Samsung Galaxy A23</li>
                             <li>Online giá rẻ</li>
                             <li>6.190.000 <sup>đ</sup></li>
-                            <li>5.690.000 <sup>đ</sup></li>
+                            <li><span>5.690.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -721,16 +796,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(1444)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/samsung-galaxy-a33-5g-xanh-thumb-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Samsung Galaxy A33</li>
+                            <li class="name-product">Samsung Galaxy A33</li>
                             <li>Online giá rẻ</li>
                             <li>7.290.000 <sup>đ</sup></li>
-                            <li>6.890.000 <sup>đ</sup></li>
+                            <li><span>6.890.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -740,16 +816,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/samsung-galaxy-a73-5g-xanh-thumb-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Samsung Galaxy A73</li>
+                            <li class="name-product">Samsung Galaxy A73</li>
                             <li>Online giá rẻ</li>
                             <li>11.990.000 <sup>đ</sup></li>
-                            <li>10.790.000 <sup>đ</sup></li>
+                            <li><span>10.790.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -759,16 +836,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/Samsung-Galaxy-S21-FE-trang-1-2-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Samsung-Galaxy S21 FE</li>
+                            <li class="name-product">Samsung-Galaxy S21 FE</li>
                             <li>Online giá rẻ</li>
                             <li>18.990.000 <sup>đ</sup></li>
-                            <li>13.990.000 <sup>đ</sup></li>
+                            <li><span>13.990.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -778,16 +856,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/vivo-V23-5G-6-1-2-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Vivo V23 5G</li>
+                            <li class="name-product">Vivo V23 5G</li>
                             <li>Online giá rẻ</li>
                             <li>8.490.000 <sup>đ</sup></li>
-                            <li>7.490.000 <sup>đ</sup></li>
+                            <li><span>7.490.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -797,16 +876,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/Vivo-V23e-1-2-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Vivo V23e</li>
+                            <li class="name-product">Vivo V23e</li>
                             <li>Online giá rẻ</li>
                             <li>8.490.000 <sup>đ</sup></li>
-                            <li>7.490.000 <sup>đ</sup></li>
+                            <li><span>7.490.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -816,16 +896,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(1444)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/vivo-y21s-blue-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Vivo-Y21s</li>
+                            <li class="name-product">Vivo-Y21s</li>
                             <li>Online giá rẻ</li>
                             <li>3.990.000 <sup>đ</sup></li>
-                            <li>3.890.000 <sup>đ</sup></li>
+                            <li><span>3.890.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -835,16 +916,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/vivo-y22s-vang-thumb-1-2-600x600.jpeg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Vivo Y22s</li>
+                            <li class="name-product">Vivo Y22s</li>
                             <li>Online giá rẻ</li>
                             <li>3.490.000 <sup>đ</sup></li>
-                            <li>3.290.000 <sup>đ</sup></li>
+                            <li><span>3.290.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -854,16 +936,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/xiaomi-poco-c40-thumb-vang-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Xiaomi Poco C40</li>
+                            <li class="name-product">Xiaomi Poco C40</li>
                             <li>Online giá rẻ</li>
                             <li>2.990.000 <sup>đ</sup></li>
-                            <li>2.390.000 <sup>đ</sup></li>
+                            <li><span>2.390.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -873,16 +956,17 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                     <div class="product-gallery-one-content-product-item">
                         <a href=""><img src="img/img2/oppo-find-x5-pro-den-thumb-600x600.jpg" alt=""></a>
                         <div class="product-gallery-one-content-product-item-text">
                             <li><img src="img/icon6-50x50.png" alt=""><p>Thanh toán VN pay</p></li>
-                            <li>Oppo Find X5 Pro</li>
+                            <li class="name-product">Oppo Find X5 Pro</li>
                             <li>Online giá rẻ</li>
                             <li>32.990.000 <sup>đ</sup></li>
-                            <li>28.990.000 <sup>đ</sup></li>
+                            <li><span>28.990.000</span><sup>đ</sup></li>
                             <li>Quà tặng 500.000<sup>đ</sup></li>
                             <li>
                                 <i class="fa-sharp fa-solid fa-star"></i>
@@ -892,6 +976,7 @@
                                 <i class="fa-sharp fa-solid fa-star"></i>
                                 <span>(151)</span>
                             </li>
+                            <button class="addCartBuying">Thêm vào giỏ hàng</button>
                         </div>
                     </div>
                 </div>
@@ -924,17 +1009,17 @@
                                 <li>CERTINA</li>
                                 <li>DS-8 LADY 27mm</li>
                                 <li>56.490.000 <sup>đ</sup></li>
-                                <li>48.016.000 <sup>đ</sup></li>
+                                <li  >48.016.000 <sup>đ</sup></li>
                             </div>
                             
                         </div>
                         <div class="product-gallery-two-content-left-bottom-item">
                             <a href=""><img src="img/image3/certina-c035-007-11-117-00-nuava-300x300.jpg" alt=""></a>
                             <div class="product-gallery-two-content-left-bottom-item-text">
-                                <li>CERTINA</li>
+                                <li>Đồng hồ CERTINA</li>
                                 <li>DS CAIMANO LADY</li>
                                 <li>17.990.000 <sup>đ</sup></li>
-                                <li>14.392.000 <sup>đ</sup></li>
+                                <li  >14.392.000 <sup>đ</sup></li>
                             </div>
                             
                         </div>
@@ -944,7 +1029,7 @@
                                 <li>CERTINA</li>
                                 <li>23909 SY-064</li>
                                 <li>31.621.000 <sup>đ</sup></li>
-                                <li>25.296.000 <sup>đ</sup></li>
+                                <li  >25.296.000 <sup>đ</sup></li>
                             </div>
                             
                         </div>
@@ -954,17 +1039,17 @@
                                 <li>CERTINA</li>
                                 <li>DS CAIMANO AUTO</li>
                                 <li>19.621.000 <sup>đ</sup></li>
-                                <li>15.296.000 <sup>đ</sup></li>
+                                <li  >15.296.000 <sup>đ</sup></li>
                             </div>
                             
                         </div>
                         <div class="product-gallery-two-content-left-bottom-item">
                             <a href=""><img src="img/image3/dong-ho-nam-titoni-83908-srg-619-300x300.jpg" alt=""></a>
                             <div class="product-gallery-two-content-left-bottom-item-text">
-                                <li>MOVADO</li>
+                                <li class="name-product">MOVADO</li>
                                 <li>3600537</li>
                                 <li>19.621.000 <sup>đ</sup></li>
-                                <li>15.296.000 <sup>đ</sup></li>
+                                <li  >15.296.000 <sup>đ</sup></li>
                             </div>
                             
                         </div>

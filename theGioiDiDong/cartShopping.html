@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/1f8ec63897.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Giỏ hàng - Thegioididong.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cartStyle.css">
+</head>
+<body>
+    <header>
+        <img src="https://cdn.tgdd.vn/2022/10/banner/sale-1200-44-1200x44.png" alt="">
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href=""> <img style="width: 150px" src="img/Logo Thế Giới Di Động - MWG - Y-H.png" alt=""></a></li>
+                <li id="address-form"><a href="#">Nha Trang<i class="fa-solid fa-sort-down"></i></a></li>
+                <div class="address-form">
+                    <div class="address-form-content">
+                        <h2>Chọn địa chỉ nhận hàng <span id="address-close">X Đóng</span></h2>
+                        <form action="">
+                            <p>Chọn đầy đủ địa chỉ nhận hàng để biết chính xác thời gian giao hàng</p>
+                            <select name="">
+                                <option value="">--Chọn địa điểm--</option>
+                                <option value="">Nha Trang</option>
+                                <option value="">Cam Lâm</option>
+                                <option value="">Diên Khánh</option>
+                            </select>
+                            <select name="">
+                                <option value="">--Vui lòng chọn Quận/Huyện--</option>
+                                <option value="">Nha Trang</option>
+                                <option value="">Cam Lâm</option>
+                                <option value="">Diên Khánh</option>
+                            </select>
+                            <select name="">
+                                <option value="">--Vui Lòng chọn Phường/Xã--</option>
+                                <option value="">Phước Thọ</option>
+                                <option value="">Phước Long</option>
+                                <option value="">Phước Hải</option>
+                            </select>
+                            <input placeholder=" Số nhà, tên đường" type="text" name="" id="">
+                            <button>Xác nhận</button>
+                        </form>
+                    </div>
+                </div>
+                <li><input type="text" placeholder="Bạn tìm kiếm..."><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li><button style="font-size: 16px;"><i style="margin-right:5px; font-size: 20px; color: red;" class="fa-solid fa-cart-shopping"></i><span style="font-size: 20px;" id="total-item"></span> Giỏ hàng</button></li>
+                <li><a href="">Lịch sử <br> đơn hàng</a></li>
+                <li><a href=""><span class="btn-content"><span class="btn-top"></span></span>Mua thẻ nạp ngay!</a></li>
+                <li><a href="">24h Công nghệ</a></li>
+                <li><a href="">Hỏi đáp</a></li>
+                <li><a href="">Game App</a></li>
+            </ul>
+        </div>
+    </nav>
+        <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-mobile-screen"></i> Điện Thoại<i style="margin-left: 5px;" class="fa-solid fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="">iPhone</a></li>
+                                <li><a href="">Samsung Galaxy</a></li>
+                                <li><a href="">Oppo</a></li>
+                                <li><a href="">Nokia</a></li>
+                                <li><a href="">Xiaomi</a></li>
+                                <li><a href="">Vivo</a></li>
+                                <li><a href="">Realme</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href=""><i class="fa-solid fa-laptop"></i>Laptop</a></li>
+                    <li><a href=""><i class="fa-solid fa-tablet"></i>Tablet</a></li>
+                    <li><a href=""><i class="fa-solid fa-headphones"></i>Phụ Kiện<i style="margin-left: 5px;" class="fa-solid fa-sort-down"></i></a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="">Sạc dự phòng</a></li>
+                                <li><a href="">Sạc, cáp</a></li>
+                                <li><a href="">Tai nghe</a></li>
+                                <li><a href="">Loa</a></li>
+                                <li><a href="">Smart home</a></li>
+                                <li><a href="">Camera</a></li>
+                                <li><a href="">Thiết bị mạng</a></li>
+                                <li><a href="">Ốp lưng</a></li>
+                                <li><a href="">Bàn phím</a></li>
+                                <li><a href="">Chuột máy tính</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href=""><i class="bi bi-smartwatch"></i>Smart Watch</a></li>
+                    <li><a href=""><i class="fa-solid fa-clock"></i>Đồng hồ</a></li>
+                    <li><a href=""><i class="fa-solid fa-desktop"></i>PC, Máy in <i class="fa-solid fa-sort-down"></i></a></li>
+                    <li><a href="">Máy cũ giá rẻ</a></li>
+                    <li><a href="">Sim, Thẻ cào</a></li>
+                    <li><a href="">Trả góp, điện nước</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+   <section class="cartShopping">
+        <div class="box-cart">
+            <div class="addInfor">
+                <ul>
+                    <li><i class="bi bi-chevron-left"></i> Mua thêm sản phẩm khác</li>
+                    <li>Giỏ hàng của bạn</li>
+                </ul>
+            </div> 
+        </div>
+        <div class="box-cart">
+           <form action="">
+            <table class="box-price">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px; margin-right: 5px;" src="img/Galaxy-S22-Ultra-White-600x600.jpg" alt="">Samsung Galaxy S22 Ultra</td>
+                        <td style="text-align: center;"><span>25.490.000</span><sup>đ</sup></td>
+                        <td style="text-align: center;"><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;text-align: center;">Xóa</td>
+                    </tr>
+                    <!-- <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px" src="img/iphone-13-pink-2-600x600.jpg" alt="">iPhone 13 Pink</td>
+                        <td><span>19.690.000</span><sup>đ</sup></td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px" src="img/iphone-13-pro-max-sierra-blue-600x600.jpeg" alt="">iPhone 13 Pro Max</td>
+                        <td><span>27.490.000</span><sup>đ</sup></td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px" src="img/iphone-14-pro-tim-thumb-600x600.jpeg" alt="">iphone 14 Pro</td>
+                        <td><span>30.990.000</span><sup>đ</sup></td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display:flex;align-items: center;"><img style="width:70px" src="img/oppo-reno8-pro-thumb-xanh-1-600x600.jpeg" alt="">Oppo Reno 8 Pro</td>
+                        <td><span>19.690.000</span><sup>đ</sup></td>
+                        <td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr> -->
+                </tbody>
+            </table>
+            <div class="price-total">
+                <p>Tạm tính(<span></span>sản phẩm):</p>
+                <p style="font-weight: bold;">Tổng tiền: <span></span><sup>đ</sup></p>
+            </div>
+        </div>
+        <div class="box-cart">
+            <div class="information-guest">
+                <h3>THÔNG TIN KHÁCH HÀNG</h3>
+                <label for="">
+                    <input type="radio" name="Gender" checked>Anh
+                    <input type="radio" name="Gender">Chị
+                </label>
+                <ul>
+                    <input type="text" placeholder="Họ và tên">
+                    <input type="text" placeholder="Số điện thoại">
+                </ul>
+                <h3>CHỌN CÁCH THỨC NHẬN HÀNG</h3>
+                <label for="">
+                    <input type="radio" name="position" checked>Giao tại nơi
+                    <input type="radio" name="position">Nhận tại siêu thị
+                </label>
+                <div class="position">
+                    <p>Chọn địa chỉ để biết thời gian nhận hàng và phí vận chuyển (nếu có)</p>
+
+                </div>
+            </div>
+            
+        </div>
+   </section>
+    <script src="javaScript.js"></script>
+</body>
+</html>

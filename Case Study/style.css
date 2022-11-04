@@ -48,7 +48,6 @@ html, body {
 }
 /* ----------------------------cart--------------------------- */
 .cart {
-    width:50%;
     margin: auto;
     text-align: center;
     position: fixed;

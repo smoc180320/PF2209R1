@@ -489,7 +489,7 @@ nav ul li:nth-child(7):hover a, nav ul li:nth-child(8):hover a, nav ul li:nth-ch
     float:  left;
     margin-right: 6px;
 }
-.silder-product-one-content-text li:last-child i {
+.silder-product-one-content-text li:nth-child(7) i {
     color: #F97E0E;
     font-size: 12px;
 }
@@ -608,7 +608,7 @@ nav ul li:nth-child(7):hover a, nav ul li:nth-child(8):hover a, nav ul li:nth-ch
     float:  left;
     margin-right: 6px;
 }
-.product-gallery-one-content-product-item-text li:last-child i {
+.product-gallery-one-content-product-item-text li:nth-child(7) i{
     color: #F97E0E;
     font-size: 12px;
 }
@@ -1058,4 +1058,76 @@ nav ul li:nth-child(7):hover a, nav ul li:nth-child(8):hover a, nav ul li:nth-ch
 }
 .trend-sale-box-content-item2 a img {
     height: 90%;
+}
+/* button thêm giỏ hàng */
+.addCartBuying {
+    height: 30px;
+    width: 90%;
+    background-color:purple;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.addCartBuying:hover{
+    background-color: red;
+    font-weight: 800;
+    transition: all 0.3s ease;
+}
+/* ----------------------------cart--------------------------- */
+.cart {
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    height: auto;
+    width: 600px;
+    right: 0;
+    top: 0;
+    background-color: rgb(231, 153, 153);
+    padding: 12px 20px;
+    overflow-y: scroll;
+    right: -100%;
+    transition: all 0.3s ease;
+    z-index: 999999;
+}
+.cart h2 {
+    margin-bottom: 20px;
+}
+.cart table {
+    width: 100%;
+}
+.cart table thead tr th:first-child{
+    text-align: center;
+}
+.cart table tr td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+}
+.cart table thead tr th:last-child{
+    text-align: right;
+}
+.cart table tbody tr td:last-child {
+    text-align: right;
+}
+/* ................... */
+.cart button {
+    margin-top: 12px;
+    height: 30px;
+    padding: 0 20px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    background-color: tomato;
+}
+/* --------------------- */
+.cart i {
+    cursor: pointer;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.cart-icon p i{
+    font-size: 25px;
 }
