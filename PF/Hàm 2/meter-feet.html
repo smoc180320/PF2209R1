@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>Title</title>
-    <script src="meter-feet.js"></script>
+    <style>
+      input{
+        height: 30px;
+      }
+      .result {
+        border: 1px solid black;
+        height: 30px;
+      }
+    </style>
   </head>
   <body>
     <form>
@@ -23,12 +31,13 @@
           </td>
         </tr>
         <tr>
-          <td><span id="result1"></span></td>
-          <td><span id="result2"></span></td>
+          <td class="result"><span id="result1"></span></td>
+          <td class="result"><span id="result2"></span></td>
         </tr>
       </table>
     </form>
     <script>
+      //convert meter to Feet
       function calFeet(meter) {
         return 3.279 * meter;
       }
@@ -37,7 +46,7 @@
         let input1 = document.getElementById("meter").value;
         document.getElementById("result1").innerHTML = calFeet(input1);
       }
-
+      //convert Feet meter
       function calMeter(feet) {
         return 0.305 * feet;
       }
