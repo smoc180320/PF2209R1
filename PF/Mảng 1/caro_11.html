@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const DONG = 5, COT = 5;
+        let mang = new Array(DONG).fill(new Array(COT));
+        function khoiTaoMang(){
+            for (let i = 0; i < mang.length; i++){
+                for (let j = 0; j < mang[i].length; j++){
+                    mang[i][j] = "0"
+                }
+            }
+        }
+        function dienGiaTri(){
+            let chiSoDong = parseInt(prompt("Dòng Số: "))
+            let chiSoCot = parseInt(prompt("Cột Số: "))
+            mang[chiSoDong][chiSoCot] = "X";
+
+        }
+        function inBanCo(){
+            let chuoi=""
+            chuoi +="br";
+            for (let i=0; i <mang.length; i++){
+                for (let j = 0; j <mang.lengt; j++){
+                    chuoi += mang[i][j] + "&nbsp;&nbsp"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

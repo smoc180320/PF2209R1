@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    So dong
+    <input type="number" id="soDong">
+    <button type="button" id="demo" onclick="nhapdong()">in ra</button>
+<script>
+    let soDong = parseInt(document.getElementById("soDong").value) 
+    console.log(soDong)
+    function nhapdong() {
+        let i = 1;
+    while (i <= soDong) {
+        document.write("<hr width = " + i + "%>");
+        i++;
+    }
+    }
+    
+</script>
+</body>
+</html>

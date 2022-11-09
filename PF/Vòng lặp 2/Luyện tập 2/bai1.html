@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Dãy Fibo: 1 1 2 3 5 8
+    let a = 0;
+    let b = 1;
+    // let count = +prompt("Nhập vào số lượng số cần hiển thị: ")
+    // document.write("Những số cần tìm là: ")
+    // for (let i = 1; i < count; i++) {
+    //     document.write(b + ", ")
+    //     let c = a + b
+    //     a = b
+    //     b = c
+    // }
+
+    //in ra 20 số đầu tiền trong dãy Fibo chia hết cho 5
+    let count = 0
+    while (count < 20) {
+        if (b % 5 === 0) {
+            document.write(b + "<br>")
+            count++
+        }
+        let c = a + b
+        a = b
+        b = c
+    }
+</script>
+</body>
+</html>

@@ -9,8 +9,8 @@ addessclose.addEventListener("click", function(){
     document.querySelector(".address-form").style.display = "none"
 })
 // --------slider----------------
-const rightBtn = document.querySelector(".bi-caret-right-fill")
-const leftBtn = document.querySelector(".bi-caret-left-fill")
+const rightBtn = document.querySelector(".bi-chevron-left")
+const leftBtn = document.querySelector(".bi-chevron-right")
 const imgNumber = document.querySelectorAll(".slider-content-left-top img")
 let index = 0
 rightBtn.addEventListener("click", function(){

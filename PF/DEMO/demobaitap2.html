@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //hàm khai báo mảng
+    function inputArr(a) {
+        let sizeArr;
+        do {
+            sizeArr = +prompt("Nhập vào kich thước của mảng: ");
+        }
+        while (sizeArr <= 0);
+
+        for (let i = 0; i < sizeArr; i++) {
+            a[i] = +prompt("Nhập vào giá trị thứ " + i + " :")
+        }
+    }
+
+    //hàm ktra value có trong mảng hay k, lấy vị trí phần tử và xóa phần tử đó
+    function checkValue(a) {
+        let value = +prompt("Nhập vào giá trị cần tim: ");
+        a.includes(value)
+        let index = a.indexOf(value)
+        a.splice(index, 1)
+        return a
+    }
+
+    //hàm thêm vào 1 value ở đầu mảng
+    function addValue(a) {
+        let value = +prompt("Nhập vào giá trị cần tim: ");
+        a.unshift(value)
+        return a
+    }
+
+    //hàm sắp xếp mảng số từ nhở đến lớn
+    function sortArr(a) {
+        let value = +prompt("Nhập vào giá trị cần tim: ");
+        a.unshift(value);
+        a.sort(function (a, b) {
+            return a - b;
+        })
+        return a
+    }
+
+    //hàm đảo ngược mảng và chuyển mảng thành chuỗi (thêm dấu cách)
+    function reversalArr(a) {
+        a.reverse()
+        a.join(", ")
+        return a
+    }
+
+    let arr = [];
+    inputArr(arr);
+    document.write(checkValue(arr));
+    document.write("<br><br>");
+    document.write(addValue(arr));
+    document.write("<br><br>");
+    document.write(sortArr(arr));
+    document.write("<br><br>");
+    document.write(reversalArr(arr));
+</script>
+</body>
+</html>

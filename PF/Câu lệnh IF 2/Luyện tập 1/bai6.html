@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sales = +prompt("Doanh số bán hàng: ")
+    let salesCommission;
+    if (sales > 100000000) {
+        salesCommission = ("Hoa hồng bằng 10% doanh số")
+    } else if (sales > 70000000) {
+        salesCommission = ("Hoa hồng bằng 5% doanh số")
+    } else if (sales > 30000000) {
+        salesCommission = ("Hoa hồng bằng 3% doanh số")
+    } else {
+        salesCommission = ("Không có hoa hồng")
+    }
+    alert(salesCommission);
+</script>
+</body>
+</html>

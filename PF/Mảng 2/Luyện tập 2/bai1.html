@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <pre>
+        Nhập vào số  dòng, số cột của ma trận
+        khởi tạo giá trị ngẫu nhiên của mỗi phần tử
+        xuất ma trân
+    </pre>
+    Nhập số dòng: <input id="soDong" min="1" type="number" /> <br />
+    Nhập số cột: <input id="soCot" min="1" type="number" /> <br />
+    <button type="button" onclick="taoMang()">Khởi tạo ma trận</button>
+    <div id="kq"></div>
+
+    <script>
+        
+      function taoMang() {
+        let bang = document.createElement("table")
+          let so_Dong = parseInt(document.getElementById("soDong").value);
+        let so_Cot = parseInt(document.getElementById("soCot").value);
+      //Khai báo mảng
+      let matran = new Array(so_Dong).fill(new Array(so_Cot))
+      //Khởi tạo
+      for (let iDong = 0; iDong < matran.length; iDong++){
+        let dong = document.createElement("tr")
+          for (jCot = 0; jCot < matran.length; jCot++){
+              matran[iDong][jCot] = Math.floor(Math.random()*100+1)
+              let cot = document.createElement("td")
+              cot.innerHTML = matran[iDong][jCot];
+              dong.appendChild(cot)
+          }
+          bang.appendChild(dong)
+      }
+      document.getElementById("kq").appendChild(bang)
+          }
+
+      // let array = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
+      // for (let i in array) {
+      //     document.write("row " + i + "<br>");
+      //     for (let j in array[i]) {
+      //         document.write(array[i][j] + "<br>");
+      //     }
+      // }
+      // document.write(array[i][j])
+    </script>
+  </body>
+</html>

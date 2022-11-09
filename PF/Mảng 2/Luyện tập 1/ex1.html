@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ví dụ mảng</h1>
+    <div>
+        <input type="text" name="" id="soNhap">
+        <button type="button" onclick="them_phan_tu()">Add</button>
+        <button type="button" onclick="hien_thi()">Display</button>
+    </div>
+    <hr>
+    <div id="kq"></div>
+    <script>
+        let mang = [];
+        function them_phan_tu(){
+            let giatri = document.getElementById("soNhap").value
+            mang.push(giatri)
+            console.log(mang)
+            document.getElementById("soNhap").value = ""
+            document.getElementById("soNhap").focus
+        }
+        function hien_thi(){
+            document.getElementById("kq").innerHTML = mang
+        }
+    </script>
+</body>
+</html>

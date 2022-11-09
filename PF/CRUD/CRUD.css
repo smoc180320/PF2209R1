@@ -1,0 +1,12 @@
+table {
+    width: 450px;
+}
+
+#name {
+    width: 50%;
+}
+
+button {
+    width: 55px;
+    text-align: center;
+}

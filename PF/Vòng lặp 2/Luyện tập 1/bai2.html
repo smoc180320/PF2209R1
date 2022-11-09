@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let temperature = 0;
+    do {
+        temperature = +prompt("Nhập vào nhiệt độ bất kỳ: ");
+        if (temperature < 20) {
+            alert("Tăng nhiệt độ")
+        } else if (temperature > 100) {
+            alert("Giảm nhiệt độ")
+        } else {
+            alert("Bình thường")
+        }
+    }
+    while (temperature < 20 || temperature > 100);
+</script>
+</body>
+</html>
