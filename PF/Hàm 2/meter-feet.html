@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
     <script src="meter-feet.js"></script>
-</head>
-<body>
-<form>
-    <table>
-        <tr style="width: 300px;height: 50px">
-            <th>Feet</th>
-            <th>Meter</th>
+  </head>
+  <body>
+    <form>
+      <table>
+        <tr style="width: 300px; height: 50px">
+          <th>Feet</th>
+          <th>Meter</th>
         </tr>
         <tr>
-            <td><label for="meter"></label><input type="number" name="a" id="meter" oninput="cal1()"></td>
-            <td><label for="feet"></label><input type="number" name="b" id="feet" oninput="cal2()"></td>
+          <td>
+            <label for="meter"></label
+            ><input type="number" name="a" id="meter" oninput="cal1()" />
+          </td>
+          <td>
+            <label for="feet"></label
+            ><input type="number" name="b" id="feet" oninput="cal2()" />
+          </td>
         </tr>
         <tr>
-            <td><span id="result1"></span></td>
-            <td><span id="result2"></span></td>
+          <td><span id="result1"></span></td>
+          <td><span id="result2"></span></td>
         </tr>
-    </table>
-</form>
-</body>
+      </table>
+    </form>
+    <script>
+      function calFeet(meter) {
+        return 3.279 * meter;
+      }
+
+      function cal1() {
+        let input1 = document.getElementById("meter").value;
+        document.getElementById("result1").innerHTML = calFeet(input1);
+      }
+
+      function calMeter(feet) {
+        return 0.305 * feet;
+      }
+
+      function cal2() {
+        let input2 = document.getElementById("feet").value;
+        document.getElementById("result2").innerHTML = calMeter(input2);
+      }
+    </script>
+  </body>
 </html>
