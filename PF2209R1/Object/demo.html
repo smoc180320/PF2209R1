@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Định nghĩa lớp xe hơi gồm Nhà SX (brandname), model, năm
+        class Car{
+            //constructor
+            constructor (name = "", model = "", year = 2022, price = 800){
+                this.branName = name;
+                this.model = model;
+                this.year = year;
+                this.price = price;
+            }
+            //method
+            toString(){
+                return `${this.branName} car, model ${this.model} ${this.year}`;
+            }
+        }
+        //object
+        let cars = [];
+        let xeGd = new Car("BMV", "X7", 2023, 3600)
+        cars.push(xeGd);
+        cars.push(new Car("Mercedes", "C300", 2022, 2400));
+        cars.push(new Car("Madaz", "CX8", 2023, 1500));
+        for (let i in cars){
+            sum = 0
+            console.log(cars[i].toString());
+            sum = sum + cars[i].price;
+        }
+        console.log('total' + sum)
+    </script>
+</body>
+</html>

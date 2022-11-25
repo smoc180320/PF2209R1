@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="900" height=600" style="border:1px solid #000000;">Your browser doesn't support canvas
+    </canvas>
+    <script>
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext("2d");
+        function veHinhTron(x,y,color){
+            ctx.beginPath();
+            ctx.arc(x,y,120,0,135)
+            ctx.lineWidth = 20;
+            ctx.strokeStyle = color;
+            ctx.stroke()
+        }
+        veHinhTron(160, 160, "blue")
+        veHinhTron(440, 160, "black")
+        veHinhTron(720, 160, "red")
+        veHinhTron(580, 240, "yellow")
+        veHinhTron(300, 240, "green")
+        
+    </script>
+</body>
+</html>
