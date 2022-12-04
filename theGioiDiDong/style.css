@@ -198,7 +198,6 @@ nav ul li:nth-child(7):hover a, nav ul li:nth-child(8):hover a, nav ul li:nth-ch
     background-color: rgba(0, 0, 0, 0.5);
     top: 0;
     left: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -1069,6 +1068,7 @@ nav ul li:nth-child(7):hover a, nav ul li:nth-child(8):hover a, nav ul li:nth-ch
     border-radius: 10px;
     font-size: 15px;
     cursor: pointer;
+    
 }
 .addCartBuying:hover{
     background-color: red;
@@ -1080,16 +1080,17 @@ nav ul li:nth-child(7):hover a, nav ul li:nth-child(8):hover a, nav ul li:nth-ch
     margin: auto;
     text-align: center;
     position: fixed;
-    height: auto;
+    height: 850px;
     width: 600px;
     right: 0;
     top: 0;
     background-color: rgb(231, 153, 153);
     padding: 12px 20px;
-    overflow-y: scroll;
+    overflow-y: auto;
     right: -100%;
     transition: all 0.3s ease;
     z-index: 999999;
+
 }
 .cart h2 {
     margin-bottom: 20px;
